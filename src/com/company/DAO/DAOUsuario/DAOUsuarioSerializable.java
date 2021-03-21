@@ -7,11 +7,14 @@ import com.company.clases.Videojuegos;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Esta clase nos permite guardar cualquier cosa pasandole algo de tipo Objeto
+ */
 public class DAOUsuarioSerializable extends DAOSerializable implements DAOUsuario {
     List<Usuarios> usuarios;
 
     public DAOUsuarioSerializable(){
-        super("mangas.txt");
+        super("usuarios.txt");
         Object obj = this.load();
         if (obj == null){
             usuarios = new ArrayList<>();
